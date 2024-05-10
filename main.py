@@ -1,12 +1,19 @@
-import keyboard  # keyboarimport
+from colorama import Fore
 from aimbot import Aimbot
 
+print(Fore.BLUE+"""
+ ____             _____    ____   _   _
+|  _ \     /\    |  __ \  / __ \ | \ | |
+| |_) |   /  \   | |__) || |  | ||  \| |
+|  _ <   / /\ \  |  _  / | |  | || . ` |
+| |_) | / ____ \ | | \ \ | |__| || |\  |
+|____/ /_/    \_\|_|  \_\ \____/ |_| \_|
 
-def toggle_aimbot():
+\n""")
+
+print(Fore.WHITE+"#AI-AIMBOT")
+print(Fore.WHITE+"#YOLOV8")
+if __name__ == "__main__":
+    Aimbot = Aimbot()
     Aimbot.status_aimbot()
-
-keyboard.add_hotkey('F1', toggle_aimbot)  # F1キーが押されたときにtoggle_aimbot関数を呼び出す
-#keyboard.add_hotkey('F2', quit_program)  # F2キーが押されたときにquit_program関数を呼び出す
-
-# メインプログラムの続行中にキー入力を監視
-keyboard.wait()
+    Aimbot.main()
