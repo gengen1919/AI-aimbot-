@@ -15,7 +15,7 @@ class Aimbot:
     Aimbot_status = colored("ENABLED","green")
     def __init__(self,time_delay=0.5,mouse_value=0,toggle_value=0,) -> None:
         global model
-        model = YOLO("model/apex.pt")
+        model = YOLO("apex.pt")
 
         if torch.cuda.is_available:
             print("CUDA:"+Fore.GREEN+"[ENABLED]")
