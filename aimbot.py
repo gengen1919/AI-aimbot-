@@ -37,6 +37,8 @@ class Aimbot:
         sys.stdout.write("\033[K")
         print(f"[!] AIMBOT IS [{Aimbot.Aimbot_status}]", end="\r")
         time.sleep(self.delay)
+    def clean_up():
+        sys.exit()
 
     def target_lock(self,target_X,target_Y):
             win32api.mouse_event(0x01,int(target_X),int(target_Y))
@@ -53,6 +55,8 @@ class Aimbot:
         while True:
             if win32api.GetAsyncKeyState(0x70) != 0:
                 self.status_aimbot()  # トグルの状態を更新
+            if win32api.GetAsyncKeyState(0x71) != 0:
+                self.clean_up()
             if win32api.GetAsyncKeyState(0x02) != self.mouse_value:
                 if self.toggle > 0:  # トグルが有効な場合のみ実行
                     sct_img = sct.grab(mon)
